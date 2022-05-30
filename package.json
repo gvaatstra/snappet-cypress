@@ -1,0 +1,23 @@
+{
+  "name": "snappet-cypress",
+  "version": "1.0.0",
+  "description": "snappet poc with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvaatstra/snappet-cypress.git"
+  },
+  "author": "Gerwin Vaatstra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvaatstra/snappet-cypress/issues"
+  },
+  "homepage": "https://github.com/gvaatstra/snappet-cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "typescript": "^4.7.2"
+  }
+}
