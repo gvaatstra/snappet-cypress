@@ -6,7 +6,6 @@
   "scripts": {
     "cypress-open-test": "npx cypress open --project ./snappet/snappet-test",
     "cypress-run-test": "npx cypress run --project ./snappet/snappet-test",
-    "cypress-run-test-and-report": "npx cypress run --project './snappet/snappet-test'; npm run cypress-merge-and-report",
     "cypress-merge-and-report": "npm run cypress-mochawesome-merge && npm run cypress-mochawesome-report",
     "cypress-mochawesome-merge": "npx mochawesome-merge ./test-reports/e2etest/mochawesome/reports/*.json > ./test-reports/e2etest/mochawesome/output-merged.json",
     "cypress-mochawesome-report": "npx marge ./test-reports/e2etest/mochawesome/output-merged.json --reportDir ./test-reports/e2etest/ --charts true -f cypress-report"
