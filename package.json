@@ -4,11 +4,16 @@
   "description": "snappet poc with Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress-open-test": "npx cypress open --project ./snappet/snappet-test",
+    "cypress-run-test": "npx cypress run --project ./snappet/snappet-test",
+    "cypress-run-test-and-report": "npx cypress run --project './snappet/snappet-test'; npm run cypress-merge-and-report",
+    "cypress-merge-and-report": "npm run cypress-mochawesome-merge && npm run cypress-mochawesome-report",
+    "cypress-mochawesome-merge": "npx mochawesome-merge ./test-reports/e2etest/mochawesome/reports/*.json > ./test-reports/e2etest/mochawesome/output-merged.json",
+    "cypress-mochawesome-report": "npx marge ./test-reports/e2etest/mochawesome/output-merged.json --reportDir ./test-reports/e2etest/ --charts true -f cypress-report"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gvaatstra/snappet-cypress.git"
+    "url": "https://github.com/gvaatstra/snappet-cypress.git"
   },
   "author": "Gerwin Vaatstra",
   "license": "ISC",
@@ -17,7 +22,9 @@
   },
   "homepage": "https://github.com/gvaatstra/snappet-cypress#readme",
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
     "cypress": "^9.7.0",
+    "mochawesome": "^7.1.3",
     "typescript": "^4.7.2"
   }
 }

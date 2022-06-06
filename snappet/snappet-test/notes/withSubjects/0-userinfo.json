@@ -1,0 +1,18 @@
+{
+    "sub": "4232034",
+    "given_name": "Gerwin",
+    "family_name": "Vaatstra",
+    "nickname": "Gerwin V.",
+    "name": "Gerwin Vaatstra",
+    "cluster_id": 13,
+    "class_id": 296902,
+    "school_id": 1,
+    "country_id": 1,
+    "grade_id": 0,
+    "role": [
+      "pupil",
+      "teacher",
+      "teacher_teaching"
+    ],
+    "preferred_username": "GerwinVaatstra"
+  }

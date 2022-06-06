@@ -1,0 +1,34 @@
+{
+    "operationName": "GetCourseWithCourseGroup",
+    "variables": {
+      "courseId": 1687
+    },
+    "query": "query GetCourseWithCourseGroup($courseId: Int!) {\n  courses {\n    course(courseId: $courseId) {\n      courseId\n      name\n      subjectId\n      shortName\n      isAvailableForClasses\n      schoolTypeId\n      publisherId\n      regionId\n      extraInstructionsCourseId\n      courseType\n      courseGroupId\n      courseManualUrl\n      courseGroup {\n        name\n        subjectId\n        courseGroupId\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"
+  }
+
+  {
+    "courses": {
+      "course": {
+        "courseId": 1687,
+        "name": "02. RekenWereld groep 8",
+        "subjectId": 3,
+        "shortName": "RekWer 8",
+        "isAvailableForClasses": true,
+        "schoolTypeId": 1,
+        "publisherId": null,
+        "regionId": null,
+        "extraInstructionsCourseId": 3951,
+        "courseType": "A",
+        "courseGroupId": 6,
+        "courseManualUrl": null,
+        "courseGroup": {
+          "name": "RekenWereld",
+          "subjectId": 3,
+          "courseGroupId": 6,
+          "__typename": "ContentApiCourseGroup"
+        },
+        "__typename": "ContentApiCourseWithCourseGroup"
+      },
+      "__typename": "Courses"
+    }
+  }

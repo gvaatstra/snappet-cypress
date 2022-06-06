@@ -17,5 +17,7 @@
 import './commands'
 import '../../../snappet-shared/cypress/support/index';
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+//Todo: figure out why this happens
+Cypress.on('uncaught:exception', (err) => {
+    return !err.message.includes(`Cannot read properties of undefined`);
+});

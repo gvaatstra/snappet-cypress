@@ -1,1 +1,23 @@
-{}
+{
+    "baseUrl": "https://teacher.snappet.org/",
+    "fileServerFolder": ".",
+    "fixturesFolder": "./cypress/fixtures",
+    "integrationFolder": "./cypress/integration",
+    "modifyObstructiveCode": false,
+    "supportFile": "./cypress/support/index.ts",
+    "pluginsFile": "./cypress/plugins/index.js",
+    "video": true,
+    "videosFolder": "../../test-reports/e2etest/videos",
+    "screenshotsFolder": "../../test-reports/e2etest/assets/",
+    "screenshotOnRunFailure": true,
+    "chromeWebSecurity": false,
+    "experimentalStudio": true,
+    "experimentalSessionAndOrigin": true,
+    "reporter": "../../node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+        "html": false,
+        "json": true,
+        "reportDir": "../../test-reports/e2etest/mochawesome/reports",
+        "overwrite": false
+    }
+}

@@ -1,0 +1,6 @@
+Delete LessonPlan (vak)
+https://dashboard.snappet.org/api/296902/LessonPlans/10294
+
+Vanuit GetBootstrapInfo:
+{data.bootstrap.userinfo.classes[0].id}
+{data.bootstrap.classInfo.subjects[0].subjectGroups[0].subjectGroupId}

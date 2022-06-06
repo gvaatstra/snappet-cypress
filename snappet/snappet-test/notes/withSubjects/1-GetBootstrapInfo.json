@@ -1,0 +1,84 @@
+{
+    "operationName": "GetBootstrapInfo",
+    "variables": {
+      "schoolId": 1,
+      "classId": 296902
+    },
+    "query": "query GetBootstrapInfo($schoolId: Int!, $classId: Int!) {\n  bootstrap {\n    userInfo(classId: $classId) {\n      classId\n      schoolId\n      devicePoolId\n      gradeName\n      isChangeClassAvailable\n      isChangeSchoolAvailable\n      isTabletPoolingEnabled\n      unreadMessagesCount\n      hasSurvey\n      notificationCount\n      classes {\n        id\n        name\n        wowStage\n        __typename\n      }\n      className\n      schoolName\n      defaultGradeId\n      schoolType\n      userName\n      countryId\n      devicePoolId\n      __typename\n    }\n    settings(schoolId: $schoolId, classId: $classId) {\n      isWayOfWorkEnabled\n      isHelpPageHidden\n      isSettingsPageHidden\n      appStartUrl\n      showSchoolReport\n      examResults\n      synchronization\n      dashboardVersion\n      usePupilAverageGrowth\n      showChat\n      showQuiz\n      __typename\n    }\n    classInfo(classId: $classId) {\n      subjects {\n        subjectId\n        name\n        iconName\n        subjectGroups {\n          subjectGroupId\n          subjectGroupName\n          grade\n          pupilIds\n          gradeId\n          __typename\n        }\n        __typename\n      }\n      pupils {\n        userId\n        abbreviatedName\n        fullName\n        firstName\n        lastName\n        inFix\n        mainSubjectGroups {\n          subjectId\n          subjectGroupId\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    school(schoolId: $schoolId, classId: $classId) {\n      schoolId\n      timeZone\n      __typename\n    }\n    __typename\n  }\n}\n"
+  }
+
+  {
+    "data": {
+      "bootstrap": {
+        "userInfo": {
+          "classId": 296902,
+          "schoolId": 1,
+          "devicePoolId": null,
+          "gradeName": "Groep 3",
+          "isChangeClassAvailable": false,
+          "isChangeSchoolAvailable": false,
+          "isTabletPoolingEnabled": false,
+          "unreadMessagesCount": 0,
+          "hasSurvey": false,
+          "notificationCount": 0,
+          "classes": [
+            {
+              "id": 296902,
+              "name": "#GerwinChallengeClass",
+              "wowStage": null,
+              "__typename": "classMenu"
+            }
+          ],
+          "className": "#GerwinChallengeClass",
+          "schoolName": "#Test School (Utrecht)",
+          "defaultGradeId": 128,
+          "schoolType": 0,
+          "userName": "Gerwin Vaatstra",
+          "countryId": 1,
+          "__typename": "userData"
+        },
+        "settings": {
+          "isWayOfWorkEnabled": true,
+          "isHelpPageHidden": false,
+          "isSettingsPageHidden": false,
+          "appStartUrl": "https://student.snappet.org",
+          "showSchoolReport": true,
+          "examResults": false,
+          "synchronization": false,
+          "dashboardVersion": 41,
+          "usePupilAverageGrowth": true,
+          "showChat": true,
+          "showQuiz": true,
+          "__typename": "settings"
+        },
+        "classInfo": {
+          "subjects": [
+            {
+              "subjectId": 3,
+              "name": "Rekenen",
+              "iconName": "Math",
+              "subjectGroups": [
+                {
+                  "subjectGroupId": 10293,
+                  "subjectGroupName": "Rekenen",
+                  "grade": 8,
+                  "pupilIds": [],
+                  "gradeId": 8,
+                  "__typename": "subjectGroupModel"
+                }
+              ],
+              "__typename": "subjectModel"
+            }
+          ],
+          "pupils": [],
+          "__typename": "subjectDropDownModel"
+        },
+        "school": {
+          "schoolId": 1,
+          "timeZone": "Europe/Amsterdam",
+          "__typename": "School"
+        },
+        "__typename": "Bootstrap"
+      }
+    }
+  }
